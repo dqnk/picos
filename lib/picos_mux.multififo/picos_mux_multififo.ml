@@ -315,7 +315,7 @@ let rec heartbeat_thread t nth =
   else begin
     if nth < 100 then begin
       if t.state <= state_killed then begin
-        Thread.delay 0.0001;
+        Thread.delay 0.005;
         heartbeat_thread t (nth + 1)
       end
     end
